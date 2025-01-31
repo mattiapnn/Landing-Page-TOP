@@ -1,165 +1,202 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0; 
+}
+
 body {
-      margin: 0;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header {
     background-color: #1F2937;
-    color: white;
+    padding: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 8px rgb(17, 23, 31);
+}
+
+.header .container {
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 80px;
-    justify-content: center;
-    padding-top: 16px;
+    align-items: center;
 }
 
-.headerlogo {
-    margin-right: 130px;
-    font-size: 24px;
-    font-weight: bold;
+.container {
+    max-width: 1000px;
+    margin-inline: auto;
 }
 
-.headerlinks {
+.links {
     display: flex;
-    gap: 16px;
-    margin-left: 130px;
+    margin-left: auto;
 }
 
-.heroheading {
-    font-size: 48px;
-    font-weight: 900;
-    color: #f9faf8;
-    margin: 0;
-}
-
-.herosub {
+.links a {
     font-size: 18px;
-    color: #e5e7eb;
-    margin: 0;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    gap: 24px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .hero {
+    background-color: #1f2937;
+    padding: 48px 24px;
+}
+
+.hero img {
+    width: 360px;
+    max-width: 100%;
+}
+
+.hero .container {
     display: flex;
     justify-content: center;
-    gap: 32px;
-    background-color: #1F2937;
-    padding-bottom: 80px;
     align-items: center;
+    gap: 24px;
+    padding: 48px 0px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #e5e7eb;
+    margin-top: 8px;
+    margin-bottom: 16px;
 }
 
 .herocontent {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    gap: 8px;
+    flex: 1;
+    flex-basis: 400px;
 }
 
-.herocontent button {
-    width: 100px;
-}
-
-.heroimg img{
-    width: 300px;
-}
-
-.herobtn {
-    background-color: #3882f6;
+button {
+    outline: none;
     border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.hero button {
+    background-color: #3882f6;
     color: white;
 }
 
-.infohead {
-    display: flex;
-    justify-content: center;
+.info {
+    padding: 48px 24px;
 }
 
-.infohead h2 {
+.info h2 {
+    text-align: center;
     font-size: 36px;
+    font-weight: 900;
 }
 
-.infoimg {
+.info .container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin-top: 48px;
+    display: flex;
     gap: 32px;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 80px;
 }
 
-.infoimg div {
-    width: 200px;
+.info img {
+    max-width: 100%;
 }
 
-.infoimg div img {
-    width: 200px;
+.info .card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+    flex-basis: 150px;
+    
+}
+
+.info .image {
+    border: 2px solid #3882f6;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+}
+
+.image img {
+    width: 64px;
+    height: 64px;
 }
 
 .quote {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0px;
+    padding: 48px 24px;
     background-color: #e5e7eb;
 }
 
-.quotetext {
-    width: 825px;
+.quote-text {
     font-size: 36px;
+    font-weight: 300;
     font-style: italic;
-    color: #1f2937;
+
 }
 
-.quoteauthor {
-    font-weight: bold;
-    width: 700px;
-    text-align: right;
-}
-
-.divmodal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 64px 0px;
+.quote-author {
+    text-align:  right;
+    font-size: 20px;
+    margin-top: 24px;
 }
 
 .modal {
-    background-color: #3882f6;
+
+    padding: 48px 24px;
+}
+
+.modal .container {
     display: flex;
-    align-items: center;
-    padding: 28px 60px;
-    color: white;
+    justify-content: space-evenly;
+    background-color: #3882f6;
+    padding: 32px 64px;
     border-radius: 8px;
-    gap: 64px;
+    align-items: center;
 }
 
-h6, p{
-    margin: 0;
-}
-
-h6 {
-    font-size: 20px;
-    margin-bottom: 4px;
-}
-
-.divmodal button {
-    border: 2px solid white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    background: none;
+.modal .text {
     color: white;
-    font-size: 16px;
-    font-weight: bold;
+}
+
+.modal button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    flex-shrink: 0;
 }
 
 .footer {
+    text-align: center;
+    padding: 24px;
     background-color: #1f2937;
-    display: flex;
-    justify-content: center;
     color: white;
-    padding: 32px 0px;
 }
-
-
 
